@@ -1,0 +1,533 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="pv-cache-enabled" content="false"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="MarkDown使用之LaTeX表示数学公式" /><meta name="author" content="JoyDee" /><meta property="og:locale" content="en_US" /><meta name="description" content="对于文本排版格式，对于$Microsoft\,Word$来说，功能尽全，可调的参数十分多，人们可能会将不少的时间放在具体的文字大小、实现样式。而$markdown$语法能够让人们通过符号去替代样式，尽管实现的样式没有像$word$那样多，但在日常使用中足矣。$Markdown$语法正是希望我们回归到内容本身。" /><meta property="og:description" content="对于文本排版格式，对于$Microsoft\,Word$来说，功能尽全，可调的参数十分多，人们可能会将不少的时间放在具体的文字大小、实现样式。而$markdown$语法能够让人们通过符号去替代样式，尽管实现的样式没有像$word$那样多，但在日常使用中足矣。$Markdown$语法正是希望我们回归到内容本身。" /><link rel="canonical" href="https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" /><meta property="og:url" content="https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" /><meta property="og:site_name" content="JoyDee’s Blog" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-08-07T00:00:00+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="MarkDown使用之LaTeX表示数学公式" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"author":{"@type":"Person","name":"JoyDee"},"description":"对于文本排版格式，对于$Microsoft\\,Word$来说，功能尽全，可调的参数十分多，人们可能会将不少的时间放在具体的文字大小、实现样式。而$markdown$语法能够让人们通过符号去替代样式，尽管实现的样式没有像$word$那样多，但在日常使用中足矣。$Markdown$语法正是希望我们回归到内容本身。","url":"https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"},"headline":"MarkDown使用之LaTeX表示数学公式","dateModified":"2020-08-07T00:00:00+08:00","datePublished":"2020-08-07T00:00:00+08:00","@context":"https://schema.org"}</script><title>MarkDown使用之LaTeX表示数学公式 | JoyDee's Blog</title><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"> <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> <script src="//unpkg.com/valine/dist/Valine.min.js"></script><meta name="baidu-site-verification" content="code-LaMrc1BO1k" /><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true }, TeX: { equationNumbers: { autoNumber: "AMS" } } }); </script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML"> </script> <script defer src="/app.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id=G-7E6EFX8P3K"></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-7E6EFX8P3K'); }); </script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end">
+<div class="profile-wrapper text-center">
+<div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> <img src="/assets/img/sample/avatar.jpeg" alt="avatar" onerror="this.style.display='none'"> </a>
+</div>
+<div class="site-title mt-3"> <a href="/">JoyDee's Blog</a>
+</div>
+<div class="site-subtitle font-italic">The dream is still alive.</div>
+</div>
+<ul class="w-100">
+<li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a>
+</li>
+<li class="nav-item"> <a href="/tabs/categories/" class="nav-link"> <i class="fa-fw fas fa-layer-group ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a>
+</li>
+<li class="nav-item"> <a href="/tabs/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a>
+</li>
+<li class="nav-item"> <a href="/tabs/archives/" class="nav-link"> <i class="fa-fw far fa-calendar-alt ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a>
+</li>
+<li class="nav-item"> <a href="/tabs/about/" class="nav-link"> <i class="fa-fw fas fa-user-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a>
+</li>
+<li class="nav-item"> <a href="/tabs/links/" class="nav-link"> <i class="fa-fw fas fa-link ml-xl-3 mr-xl-3 unloaded"></i> <span>LINKS</span> </a>
+</li>
+</ul>
+<div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/J-StrawHat" aria-label="github" class="order-3" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="https://music.163.com/#/user/home?id=86403312" aria-label="music" class="order-4" target="_blank" rel="noopener"> <i class="fas fa-compact-disc"></i> </a> <a href="javascript:location.href%20=%20'mailto:'%20+%20%5B'422148166','qq.com'%5D.join('@')" aria-label="email" class="order-5"> <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" class="order-6"> <i class="fas fa-rss-square"></i> </a> <span class="icon-border order-2"></span> <span id="mode-toggle-wrapper" class="order-1"> <i class="mode-toggle fas fa-adjust"></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.updateMermaid(); }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer) ) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } updateMermaid() { if (typeof mermaid !== "undefined") { let expectedTheme = (this.modeStatus === ModeToggle.DARK_MODE? "dark" : "default"); let config = { theme: expectedTheme }; /* re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */ $(".mermaid").each(function() { let svgCode = $(this).prev().children().html(); $(this).removeAttr("data-processed"); $(this).html(svgCode); }); mermaid.initialize(config); mermaid.init(undefined, ".mermaid"); } } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } this.updateMermaid(); } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span>
+</div>
+</div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>MarkDown使用之LaTeX表示数学公式</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div>
+<i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel">Cancel</span>
+</div></div><div id="main-wrapper">
+<div id="main">
+<div class="row">
+<div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+<div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href="/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">其他知识技术分享</a>, <a href="/categories/latex/">LaTeX</a>
+</div>
+<h1 data-toc-skip>MarkDown使用之LaTeX表示数学公式</h1>
+<div class="post-meta text-muted d-flex flex-column">
+<div> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Fri, Aug 7, 2020, 12:00 AM +0800"> Aug 7, 2020 <i class="unloaded">2020-08-07T00:00:00+08:00</i> </span> by <span class="author"> JoyDee </span>
+</div>
+<div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1437 words">7 min</span> <span id="busuanzi_value_page_pv"></span> views</div>
+</div>
+<div class="post-content">
+<p>对于文本排版格式，对于$Microsoft\,Word$来说，功能尽全，可调的参数十分多，人们可能会将不少的时间放在具体的文字大小、实现样式。而$markdown$语法能够让人们通过符号去替代样式，尽管实现的样式没有像$word$那样多，但在日常使用中足矣。$Markdown$语法正是希望我们回归到内容本身。</p>
+<p>自从接触博客后，需要用到不少的$markdown$语法，同时算法相关的随笔需要借助数学语言表达，在此总结下$markdown$的$LaTeX$来排版数学公式。当教授让我们布置$word$文件报告，需要写数学公式时，直接在<a href="https://typora.io/">软件$typora$</a>，将公式写好，再<strong>直接导出为$word$文件</strong>即可！（翻到下面有<a href="https://www.cnblogs.com/J-StrawHat/p/13452821.html#%E5%9B%9B%E3%80%81markdown%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA%E4%B8%BAword%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6">教程</a>）</p>
+<p>本篇文章部分参考了@<a href="https://www.jianshu.com/u/04a58d82d762">Kiven_1994</a>的简书<a href="https://www.jianshu.com/p/0ea47ae02262">文章</a>，节选了我使用频率高的命令公式与符号。</p>
+<h1 id="一基础语法">一、基础语法</h1>
+<blockquote><p>$tips:$ $LaTeX$语法基于<code class="language-plaintext highlighter-rouge">$...$</code>或者 <code class="language-plaintext highlighter-rouge">$$...$$</code> 格式，简单来说就是你在写文章时，需要将公式放入内<code class="language-plaintext highlighter-rouge">$...$</code>或者 <code class="language-plaintext highlighter-rouge">$$...$$</code> 内部</p></blockquote>
+<p>$LaTeX$公式有两类：</p>
+<ul>
+<li><p><strong>行内公式</strong> ：常用于夹在正文中，格式为<code class="language-plaintext highlighter-rouge">$...$</code>，$eg:$ <code class="language-plaintext highlighter-rouge">$\sum_{i=0}^{\infty}\frac{1}{n}$</code>显示为$\sum_{i=0}^{\infty}\frac{1}{n}$</p></li>
+<li><p><strong>独立公式</strong>：其实就是将公式独占一行(<del>比如理工科教材的数学公式</del>)，格式为<code class="language-plaintext highlighter-rouge">$$...$$</code> \(\sum_{i=0}^{\infty}\frac{1}{n}\)</p></li>
+</ul>
+<h1 id="二常用数学表达命令">二、常用数学表达命令</h1>
+<h2 id="上下标表示">上下标表示</h2>
+<ul>
+<li><p>上标：使用<code class="language-plaintext highlighter-rouge">^</code>表示，如：<code class="language-plaintext highlighter-rouge">$x^{2k+1}$</code>显示为$x^{2k+1}$；</p></li>
+<li><p>下标：使用<code class="language-plaintext highlighter-rouge">_</code>表示，如：<code class="language-plaintext highlighter-rouge">$a_{2k}$</code>显示为$a_{2k}$；</p></li>
+<li><p>上下标混用：实例：<code class="language-plaintext highlighter-rouge">$x_1^2$</code>显示为$x_1^2$ ；<code class="language-plaintext highlighter-rouge">$x^{y_z}$</code>显示为$x^{y_z}$</p></li>
+</ul>
+<h2 id="分数样式">分数样式</h2>
+<ul>
+<li><p>分式根据环境设置样式，如<code class="language-plaintext highlighter-rouge">$\frac{x}{y}$</code>显示为$\frac{x}{y}$</p></li>
+<li><p>复杂分式，待补充</p></li>
+</ul>
+<h2 id="根式">根式</h2>
+<ul>
+<li>二次根式：使用<code class="language-plaintext highlighter-rouge">$\sqrt{...}$</code>，如<code class="language-plaintext highlighter-rouge">$\sqrt{233}$</code>显示为$\sqrt{233}$</li>
+<li>$n$次根式：使用<code class="language-plaintext highlighter-rouge">$\sqrt[n]{...}$</code>，如<code class="language-plaintext highlighter-rouge">$\sqrt[233]{666}$</code>显示为$\sqrt[66]{233}$</li>
+</ul>
+<h2 id="向量">向量</h2>
+<ul><li>使用<code class="language-plaintext highlighter-rouge">$\vec{...}$</code>，例如 <code class="language-plaintext highlighter-rouge">$\vec{AB}$</code>，显示为$\vec{AB}$</li></ul>
+<h2 id="空间间距占位宽度">空间间距—占位宽度</h2>
+<p>以数字$233$举例：</p>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th style="text-align: center"> </th>
+<th style="text-align: center">举例</th>
+<th style="text-align: center">显示效果</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: center">无空格</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$23$</code></td>
+<td style="text-align: center">显示为 $23$</td>
+</tr>
+<tr>
+<td style="text-align: center">小空格</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$2\,3$</code></td>
+<td style="text-align: center">$2\,3$</td>
+</tr>
+<tr>
+<td style="text-align: center">1/3个空格</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$2\ 3$</code></td>
+<td style="text-align: center">$2\ 3$</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="省略号">省略号</h2>
+<ul><li>使用<code class="language-plaintext highlighter-rouge">$\dots$</code>，显示为$\dots$</li></ul>
+<h2 id="公式组">公式组</h2>
+<div class="language-latex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre>  <span class="p">$$</span><span class="nb">
+      </span><span class="nv">\begin</span><span class="p">{</span><span class="nb">align</span><span class="p">}</span><span class="nb">
+            x</span><span class="o">+</span><span class="nb">y</span><span class="o">+</span><span class="nb">z</span><span class="o">=</span><span class="m">1</span><span class="nb"> </span><span class="nv">\nonumber\\</span><span class="nb">
+            x</span><span class="o">+</span><span class="m">5</span><span class="nb">y</span><span class="o">-</span><span class="nb">z</span><span class="o">=</span><span class="m">6</span><span class="nb"> </span><span class="nv">\nonumber\\</span><span class="nb">
+            x</span><span class="o">-</span><span class="nb">y</span><span class="o">+</span><span class="nb">z</span><span class="o">=</span><span class="m">5</span><span class="nb"> </span><span class="nv">\nonumber</span><span class="nb">
+      </span><span class="nv">\end</span><span class="p">{</span><span class="nb">align</span><span class="p">}</span><span class="nb">
+  </span><span class="p">$$</span>
+</pre></td>
+</tr></tbody></table></code></div></div>\[\begin{align} x+y+z=1 \nonumber\\ x+5y-z=6 \nonumber\\ x-y+z=5 \nonumber \end{align}\]<blockquote><p>$tips:$其中的<code class="language-plaintext highlighter-rouge">{align}</code>表示为公式中间对齐；而<code class="language-plaintext highlighter-rouge">{nonumber}</code>表示不需要给公式编号；注意，要形成多行公式的话，除了最后一行的公式以外，其他公式行末需要加<code class="language-plaintext highlighter-rouge">\\</code>作结尾</p></blockquote>
+<h2 id="分支公式-分段函数">分支公式 (分段函数)</h2>
+<div class="language-latex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td>
+<td class="rouge-code"><pre>  <span class="p">$$</span><span class="nb">
+      y</span><span class="o">=</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">cases</span><span class="p">}</span><span class="nb">
+            </span><span class="m">1</span><span class="nb">, </span><span class="p">&amp;</span><span class="nb">x </span><span class="o">=</span><span class="nb"> </span><span class="o">-</span><span class="m">1</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+           </span><span class="o">-</span><span class="nb">x, </span><span class="p">&amp;</span><span class="nb">x </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">  </span><span class="nv">\\</span><span class="nb">
+            x, </span><span class="p">&amp;</span><span class="nb">x &gt; </span><span class="m">0</span><span class="nb">
+      </span><span class="nv">\end</span><span class="p">{</span><span class="nb">cases</span><span class="p">}</span><span class="nb">
+  </span><span class="p">$$</span>
+</pre></td>
+</tr></tbody></table></code></div></div>\[y=\begin{cases} 1, &amp;x = -1 \\ -x, &amp;x = 0 \\ x, &amp;x &gt; 0 \end{cases}\]<blockquote><p>tips: 使用<code class="language-plaintext highlighter-rouge">{cases}</code>作为始末</p></blockquote>
+<h2 id="矩阵">矩阵</h2>
+<div class="language-latex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td>
+<td class="rouge-code"><pre>  <span class="p">$$</span><span class="nb">
+      </span><span class="nv">\begin</span><span class="p">{</span><span class="nb">pmatrix</span><span class="p">}</span><span class="nb">
+	a </span><span class="p">&amp;</span><span class="nb"> b </span><span class="nv">\\</span><span class="nb">
+	c </span><span class="p">&amp;</span><span class="nb"> d 
+      </span><span class="nv">\end</span><span class="p">{</span><span class="nb">pmatrix</span><span class="p">}</span><span class="nb">
+
+      </span><span class="nv">\begin</span><span class="p">{</span><span class="nb">bmatrix</span><span class="p">}</span><span class="nb">
+	a </span><span class="p">&amp;</span><span class="nb"> b </span><span class="nv">\\</span><span class="nb">
+	c </span><span class="p">&amp;</span><span class="nb"> d
+      </span><span class="nv">\end</span><span class="p">{</span><span class="nb">bmatrix</span><span class="p">}</span><span class="nb">
+  </span><span class="p">$$</span>
+</pre></td>
+</tr></tbody></table></code></div></div>\[\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \quad \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\]<blockquote><p>$tips:$使用<code class="language-plaintext highlighter-rouge">{pmatrix}</code>表示的小括号边界的矩阵；使用<code class="language-plaintext highlighter-rouge">{bmatrix}</code>表示的方括号边界的矩阵</p></blockquote>
+<h2 id="积分">积分</h2>
+<ul>
+<li><p>不定积分：使用<code class="language-plaintext highlighter-rouge">$\int ... $</code>，例如<code class="language-plaintext highlighter-rouge">$\int h(x)dx$</code>，显示为$\int h(x)dx$</p></li>
+<li><p>定积分：使用<code class="language-plaintext highlighter-rouge">$\int_{下限}^{上限} ... $</code>，例如<code class="language-plaintext highlighter-rouge">$\int_{a}^{b}h(x)dx$</code>，显示为$\int_{a}^{b} h(x)dx$</p></li>
+<li><p>二重积分：举例<code class="language-plaintext highlighter-rouge">$\iint_D f(x, y)dxdy$</code>显示为$\iint_D f(x, y)dxdy$ ；或者，<code class="language-plaintext highlighter-rouge">$\iint_D f(x, y)d\sigma$</code>，显示为$\iint_D f(x, y)d\sigma$</p></li>
+<li><blockquote><p>$tips:$<code class="language-plaintext highlighter-rouge">int</code>前面多少个$i$表示多少重积分；<code class="language-plaintext highlighter-rouge">int</code>前面为$o$表示积分区域闭合</p></blockquote></li>
+<li>第二型闭合曲线积分：举例<code class="language-plaintext highlighter-rouge">$\oint_L Pdx+Qdy$</code>，显示为$\oint_L Pdx+Qdy$</li>
+</ul>
+<h1 id="三常用数学符号整理">三、常用数学符号整理</h1>
+<h2 id="希腊字母">希腊字母</h2>
+<p><del>此处选了常用的</del></p>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>$\alpha$</td>
+<td><code class="language-plaintext highlighter-rouge">$\alpha$</code></td>
+<td>$\beta$</td>
+<td><code class="language-plaintext highlighter-rouge">$\beta$</code></td>
+<td>$\gamma$</td>
+<td><code class="language-plaintext highlighter-rouge">$\gamma$</code></td>
+</tr>
+<tr>
+<td>$\delta$</td>
+<td><code class="language-plaintext highlighter-rouge">$\delta$</code></td>
+<td>$\varepsilon$</td>
+<td><code class="language-plaintext highlighter-rouge">$\varepsilon$</code></td>
+<td>$\zeta$</td>
+<td><code class="language-plaintext highlighter-rouge">$\zeta$</code></td>
+</tr>
+<tr>
+<td>$\eta$</td>
+<td><code class="language-plaintext highlighter-rouge">$\eta$</code></td>
+<td>$\theta$</td>
+<td><code class="language-plaintext highlighter-rouge">$\theta$</code></td>
+<td>$\lambda$</td>
+<td><code class="language-plaintext highlighter-rouge">$\lambda$</code></td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td><code class="language-plaintext highlighter-rouge">$\mu$</code></td>
+<td>$\nu$</td>
+<td><code class="language-plaintext highlighter-rouge">$\nu$</code></td>
+<td>$\xi$</td>
+<td><code class="language-plaintext highlighter-rouge">$\xi$</code></td>
+</tr>
+<tr>
+<td>$o$</td>
+<td><code class="language-plaintext highlighter-rouge">$o$</code></td>
+<td>$\pi$</td>
+<td><code class="language-plaintext highlighter-rouge">$\pi$</code></td>
+<td>$\rho$</td>
+<td><code class="language-plaintext highlighter-rouge">$\rho$</code></td>
+</tr>
+<tr>
+<td>$\sigma$</td>
+<td><code class="language-plaintext highlighter-rouge">$\sigma$</code></td>
+<td>$\tau$</td>
+<td><code class="language-plaintext highlighter-rouge">$\tau$</code></td>
+<td>$\upsilon$</td>
+<td><code class="language-plaintext highlighter-rouge">$\upsilon$</code></td>
+</tr>
+<tr>
+<td>$\phi$</td>
+<td><code class="language-plaintext highlighter-rouge">$\phi$</code></td>
+<td>$\varphi$</td>
+<td><code class="language-plaintext highlighter-rouge">$\varphi$</code></td>
+<td>$\omega$</td>
+<td><code class="language-plaintext highlighter-rouge">$\omega$</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="二元关系符-附-ams二元关系符">二元关系符 (附-AMS二元关系符)</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>$\le$</td>
+<td><code class="language-plaintext highlighter-rouge">$\le$</code></td>
+<td>$\ge$</td>
+<td><code class="language-plaintext highlighter-rouge">$\ge$</code></td>
+<td>$\equiv$</td>
+<td><code class="language-plaintext highlighter-rouge">$\equiv$</code></td>
+</tr>
+<tr>
+<td>$\ll$</td>
+<td><code class="language-plaintext highlighter-rouge">$\ll$</code></td>
+<td>$\gg$</td>
+<td><code class="language-plaintext highlighter-rouge">$\gg$</code></td>
+<td>$\approx$</td>
+<td><code class="language-plaintext highlighter-rouge">$\approx$</code></td>
+</tr>
+<tr>
+<td>$\subset$</td>
+<td><code class="language-plaintext highlighter-rouge">$\subset$</code></td>
+<td>$\supset$</td>
+<td><code class="language-plaintext highlighter-rouge">$\supset$</code></td>
+<td>$\cong$</td>
+<td><code class="language-plaintext highlighter-rouge">$\cong$</code></td>
+</tr>
+<tr>
+<td>$\subseteq$</td>
+<td><code class="language-plaintext highlighter-rouge">$\subseteq$</code></td>
+<td>$\supseteq$</td>
+<td><code class="language-plaintext highlighter-rouge">$\supseteq$</code></td>
+<td>$\ne$</td>
+<td><code class="language-plaintext highlighter-rouge">$\ne$</code></td>
+</tr>
+<tr>
+<td>$\in$</td>
+<td><code class="language-plaintext highlighter-rouge">$\in$</code></td>
+<td>$\ni$</td>
+<td><code class="language-plaintext highlighter-rouge">$\ni$</code></td>
+<td>$\notin$</td>
+<td><code class="language-plaintext highlighter-rouge">$\notin$</code></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote><p>$Tips:$在上述符号相应命令<strong>之前</strong>加上<code class="language-plaintext highlighter-rouge">\not</code>得到否定形式，如<code class="language-plaintext highlighter-rouge">$\not\subset$</code>，得到$\not\subset$</p></blockquote>
+<h2 id="二元运算符">二元运算符</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: center">$+$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$+$</code></td>
+<td style="text-align: center">$-$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$-$</code></td>
+<td style="text-align: center">$\div$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\div$ </code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\pm$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\pm$</code></td>
+<td style="text-align: center">$\mp$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\mp</code></td>
+<td style="text-align: center">$\setminus$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\setminus$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\cdot$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\cdot$</code></td>
+<td style="text-align: center">$\times$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\times$</code></td>
+<td style="text-align: center">$\bigtriangleup$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\bigtriangleup$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\cup$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\cup$</code></td>
+<td style="text-align: center">$\cap$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\cap$</code></td>
+<td style="text-align: center">$\oplus$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\oplus$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\vee$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\vee$</code></td>
+<td style="text-align: center">$\land$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\land$</code></td>
+<td style="text-align: center">$\odot$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\odot$</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="大尺寸运算符">大尺寸运算符</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: center">$\sum$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\sum$</code></td>
+<td style="text-align: center">$\prod$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\prod$</code></td>
+<td style="text-align: center">$\int$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\int$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\bigcup$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\bigcup$</code></td>
+<td style="text-align: center">$\bigcap$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\bigcap$</code></td>
+<td style="text-align: center">$\oint$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\oint$</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="箭头">箭头</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: center">$\leftarrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\leftarrow$</code></td>
+<td style="text-align: center">$\rightarrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\rightarrow$</code></td>
+<td style="text-align: center">$\leftrightarrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\leftrightarrow$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\uparrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\uparrow$</code></td>
+<td style="text-align: center">$\downarrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\downarrow$</code></td>
+<td style="text-align: center">$\rightleftharpoons$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\rightleftharpoons$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">$\Leftarrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\Leftarrow$</code></td>
+<td style="text-align: center"><strong>$\Rightarrow$</strong></td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\Rightarrow$</code></td>
+<td style="text-align: center">$\Leftrightarrow$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\Leftrightarrow$</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="定界符包括大型">定界符(包括大型)</h2>
+<div class="table-wrapper"><table>
+<thead><tr>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+<th style="text-align: center">符号</th>
+<th style="text-align: center">命令</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: center"><strong>$\lfloor$</strong></td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\lfloor$</code></td>
+<td style="text-align: center">$\rfloor$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\rfloor$</code></td>
+<td style="text-align: center">$\vert$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\vert$</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><strong>$\lceil$</strong></td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\lceil$</code></td>
+<td style="text-align: center">$\rceil$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\rceil$</code></td>
+<td style="text-align: center">$/$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$/$</code></td>
+</tr>
+<tr>
+<td style="text-align: center">${$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\{$</code></td>
+<td style="text-align: center">$}$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\}$</code></td>
+<td style="text-align: center">$\backslash$</td>
+<td style="text-align: center"><code class="language-plaintext highlighter-rouge">$\backslash$</code></td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="四markdown格式文件导出为word格式文件">四、markdown格式文件导出为word格式文件</h1>
+<p>首先，肯定是将$typora$下载并安装好。我们在$typora$中将作业写好后，按照下图绿色箭头点中。</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://gitee.com/j__strawhat/MyImages/raw/master/image-20201006150459920.png" alt="image-20201006150459920"></p>
+<p>接下来它会弹出个$pandoc$的相关文档（$pandoc$软件能够帮你将文档从一种格式转换为其他格式，极其方便），点击$installing$，要么会给你自动生成链接</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://gitee.com/j__strawhat/MyImages/raw/master/image-20201006151014393.png" alt="image-20201006151014393"></p>
+<p>或者它会让你跳转到$github$网站下载。选择<strong>$.msi$格式</strong>文件下载即可。</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://gitee.com/j__strawhat/MyImages/raw/master/image-20201006151216654.png" alt="image-20201006151216654"></p>
+<p>下完后，无脑点击安装就行。装完之后重启下$typora$软件。</p>
+<p><strong>以后</strong>，导出$word$文档的时候，直接如下图点击，</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://gitee.com/j__strawhat/MyImages/raw/master/image-20201006150459920.png" alt="image-20201006150459920"></p>
+<p>$typora$上方显示导出成功后，点开查看</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://gitee.com/j__strawhat/MyImages/raw/master/image-20201006151603117.png" alt="image-20201006151603117"></p>
+<p>大功告成~<img class="emoji" title=":smile_cat:" alt=":smile_cat:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f638.png" height="20" width="20"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://gitee.com/j__strawhat/MyImages/raw/master/image-20201006151907986.png" alt="image-20201006151907986"></p>
+<h1 id="五值得学习">五、值得学习</h1>
+<p><a href="https://studyingfather.blog.luogu.org/blog-written-guide">如何用 Markdown&amp;LaTeX 写一篇排版整齐的题解?</a></p>
+</div>
+<div class="post-tail-wrapper text-muted">
+<div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href="/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">其他知识技术分享</a>, <a href="/categories/latex/">LaTeX</a>
+</div>
+<div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/latex/" class="post-tag no-text-decoration">LaTeX</a>
+</div>
+<div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+<div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div>
+<div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%20-%20JoyDee's%20Blog&amp;url=https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%20-%20JoyDee's%20Blog&amp;u=https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%20-%20JoyDee's%20Blog&amp;url=https://joydee.top/posts/MarkDown%E4%BD%BF%E7%94%A8%E4%B9%8BLaTeX%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span>
+</div>
+</div>
+</div>
+</div></div>
+<div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down">
+<div class="access">
+<div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2">
+<li><a href="/posts/text-and-typography/">Text and Typography</a></li>
+<li><a href="/posts/write-a-new-post/">Writing a New Post</a></li>
+<li><a href="/posts/enable-google-pv/">Enable Google Page Views</a></li>
+<li><a href="/posts/2021%E5%B9%B4%E6%9D%82%E8%A8%80%E7%A2%8E%E8%AF%AD/">2021年的杂言碎语</a></li>
+<li><a href="/posts/Junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/">「JavaSE学习笔记09」Junit、反射、注解</a></li>
+</ul>
+</div>
+<div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E8%B4%AA%E5%BF%83/">算法-贪心</a> <a class="post-tag" href="/tags/cpp/">Cpp</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%B7%B1%E6%90%9C/">算法-深搜</a> <a class="post-tag" href="/tags/javase/">JavaSE</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F/">算法-模拟</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%80%9D%E6%83%B3/">算法-二分思想</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">算法-哈希表</a> <a class="post-tag" href="/tags/mysql/">MySQL</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%9A%B4%E5%8A%9B/">算法-暴力</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%9E%9A%E4%B8%BE/">算法-枚举</a>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="sticky pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+<div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+<h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
+<div class="card-deck mb-4">
+<div class="card"> <a href="/posts/CodeBlocks%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/"><div class="card-body"> <span class="timeago small"> Oct 6, 2020 <i class="unloaded">2020-10-06T16:33:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>CodeBlocks相关配置</h3>
+<div class="text-muted small"><p> 打开调试模式 首先一定是创建项目。 项目创建完成后，配置调试器$GDB$路径 打开调试窗口。 C++11标准 字体调节</p></div>
+</div></a>
+</div>
+<div class="card"> <a href="/posts/Git-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B002%E4%B8%A8Git-%E5%88%86%E6%94%AF/"><div class="card-body"> <span class="timeago small"> Dec 1, 2020 <i class="unloaded">2020-12-01T00:00:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>「Git学习笔记01」Git 分支</h3>
+<div class="text-muted small"><p> 几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离开来，以免影响开发主线。而 Git 的分支模型被称为它的“必杀技特性”，使得Git 从众多版本控制系统中脱颖而出。 Git 的分支模型的学习，我是通过Learn Git Branching学习的，感谢他们的动画以及练习，本篇笔记正是总结自这个网站的。 Git 本地分支命令 1. 基础篇 ...</p></div>
+</div></a>
+</div>
+<div class="card"> <a href="/posts/%E7%BD%91%E7%BB%9C%E6%95%99%E5%AD%A6%E5%B9%B3%E5%8F%B0ppt/"><div class="card-body"> <span class="timeago small"> Dec 1, 2020 <i class="unloaded">2020-12-01T00:20:00+08:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>十分钟内将网络教学平台的ppt或pdf“扒”下来</h3>
+<div class="text-muted small"><p> “阴险”的语文老师，将583页的 复习资料PDF 上传到平台上😵，然而平台上阅读体验不佳（下图即能即表现出其加载慢，翻页麻烦，又不能留下自己的学习痕迹），必须得将这个文件下载下来！但是发现，老师并没有给出下载渠道，我们只能阅读却不能下载！😅 没有储备多少前端知识的我，只能按下F12，进入火狐浏览器的开发者模式，摸索下是否能够找到这个583页pdf文件的源链接。经过观察，发现网络这一栏能...</p></div>
+</div></a>
+</div>
+</div>
+</div>
+<div class="post-navigation d-flex justify-content-between"> <a href="/posts/CF661(Div3)/" class="btn btn-outline-primary" prompt="Older"><p>Codeforces Round#661 (Div. 3) D、E1题解</p></a> <a href="/posts/LeetCode%E5%91%A8%E8%B5%9B201/" class="btn btn-outline-primary" prompt="Newer"><p>Leetcode 周赛#201 题解</p></a>
+</div>
+<div id="comments" class="pt-2 pb-4"></div>
+<script> new Valine({ av: AV, el: '#comments', visitor: true, app_id: 'EENEA9r3ULJmKLcsgKxSCNqh-gzGzoHsz', app_key: 'IcFH9q9WfYblgGkcR0fq9OYh', placeholder:'留下你的评论吧，支持markdown语法！填写邮箱还能获得回复通知噢！', enableQQ: true }); </script>
+</div></div></div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('.post-content img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center">
+<div class="footer-left"><p class="mb-0"> © 2021 <a href="https://music.163.com/#/user/home?id=86403312">JoyDee</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div>
+<div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="" target="_blank" rel="noopener"></a> theme.</p></div>
+</div></footer>
+</div>
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content">
+<div id="search-hints">
+<h4 class="text-muted mb-4">Trending Tags</h4>
+<a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E8%B4%AA%E5%BF%83/">算法 贪心</a> <a class="post-tag" href="/tags/cpp/">Cpp</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%B7%B1%E6%90%9C/">算法 深搜</a> <a class="post-tag" href="/tags/javase/">JavaSE</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%A8%A1%E6%8B%9F/">算法 模拟</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%80%9D%E6%83%B3/">算法 二分思想</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">算法 哈希表</a> <a class="post-tag" href="/tags/mysql/">MySQL</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%9A%B4%E5%8A%9B/">算法 暴力</a> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95-%E6%9E%9A%E4%B8%BE/">算法 枚举</a>
+</div>
+<div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+</div></div>
+</div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://joydee.top{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
